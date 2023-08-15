@@ -1,0 +1,36 @@
+.box {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  background: url("../../assets/a.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: auto 80px;
+}
+.shake {
+  animation-name: like-module-shake;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  transform-origin:25px 67px;
+}
+.click {
+  animation-name: like-module-click;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(27);
+  animation-fill-mode: forwards;
+}
+@keyframes like-module-click {
+  100% {
+    background-position: -2160px 0;
+  }
+}
+@keyframes like-module-shake {
+  25% {
+    transform:  rotate(6deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+}
